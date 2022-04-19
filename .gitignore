@@ -4,3 +4,6 @@ coverage
 
 # Dependencies
 vendor
+
+# JetBrains idea
+.idea

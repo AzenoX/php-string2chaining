@@ -1,0 +1,19 @@
+{
+    "name": "azenox/php-string2chaining",
+    "description": "Convert string containing chains into object chains",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Azenox\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alexis Hayat",
+            "email": "azen0x.alexis@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}

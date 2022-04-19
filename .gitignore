@@ -1,0 +1,6 @@
+# Tests
+coverage
+.phpunit.result.cache
+
+# Dependencies
+vendor

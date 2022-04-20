@@ -2,6 +2,7 @@
     "name": "azenox/php-string2chaining",
     "description": "Convert string containing chains into object chains",
     "type": "library",
+    "homepage": "https://github.com/AzenoX/php-string2chaining",
     "autoload": {
         "psr-4": {
             "Azenox\\": "src/"

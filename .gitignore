@@ -7,3 +7,6 @@ vendor
 
 # JetBrains idea
 .idea
+
+#composer lock
+composer.lock

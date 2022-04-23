@@ -41,4 +41,27 @@ class ParseTest extends TestCase
 
         $this->assertEquals(strtoupper($text), String2chaining::parse($obj, $str));
     }
+
+    /**
+     * @test
+     */
+    public function should_return_null_if_null_is_passed_as_object()
+    {
+        $obj = null;
+        $text = 'bar';
+        $str = 'uppercase(' . $text . ')';
+
+        $this->assertNull(String2chaining::parse($obj, $str));
+    }
+
+    /**
+     * @test
+     */
+    public function should_return_the_original_object_if_str_is_null()
+    {
+        $obj = new Foo();
+        $str = null;
+
+        $this->assertEquals($obj, String2chaining::parse($obj, $str));
+    }
 }

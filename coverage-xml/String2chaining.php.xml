@@ -2,26 +2,34 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="String2chaining.php" path="\">
     <totals>
-      <lines total="31" comments="7" code="24" executable="9" executed="8" percent="88.89"/>
-      <methods count="1" tested="0" percent="0.00"/>
+      <lines total="31" comments="7" code="24" executable="9" executed="9" percent="100.00"/>
+      <methods count="1" tested="1" percent="100.00"/>
       <functions count="0" tested="0" percent="0"/>
-      <classes count="1" tested="0" percent="0.00"/>
+      <classes count="1" tested="1" percent="100.00"/>
       <traits count="0" tested="0" percent="0"/>
     </totals>
-    <class name="Azenox\String2chaining" start="5" executable="9" executed="8" crap="3.01">
+    <class name="Azenox\String2chaining" start="5" executable="9" executed="9" crap="4">
       <namespace name="Azenox"/>
-      <method name="parse" signature="parse(mixed $object, string $str): mixed" start="12" end="29" crap="3.01" executable="9" executed="8" coverage="88.888888888889"/>
+      <method name="parse" signature="parse($object, ?string $str)" start="12" end="29" crap="4" executable="9" executed="9" coverage="100"/>
     </class>
     <coverage>
       <line nr="14">
         <covered by="Tests\Unit\ParseTest::parse_properties_should_return_the_final_value"/>
         <covered by="Tests\Unit\ParseTest::parse_methods_should_return_the_final_value"/>
         <covered by="Tests\Unit\ParseTest::parse_methods_with_parameters_should_return_the_final_value"/>
+        <covered by="Tests\Unit\ParseTest::should_return_null_if_null_is_passed_as_object"/>
+        <covered by="Tests\Unit\ParseTest::should_return_the_original_object_if_str_is_null"/>
       </line>
       <line nr="15">
         <covered by="Tests\Unit\ParseTest::parse_properties_should_return_the_final_value"/>
         <covered by="Tests\Unit\ParseTest::parse_methods_should_return_the_final_value"/>
         <covered by="Tests\Unit\ParseTest::parse_methods_with_parameters_should_return_the_final_value"/>
+        <covered by="Tests\Unit\ParseTest::should_return_null_if_null_is_passed_as_object"/>
+        <covered by="Tests\Unit\ParseTest::should_return_the_original_object_if_str_is_null"/>
+      </line>
+      <line nr="16">
+        <covered by="Tests\Unit\ParseTest::should_return_null_if_null_is_passed_as_object"/>
+        <covered by="Tests\Unit\ParseTest::should_return_the_original_object_if_str_is_null"/>
       </line>
       <line nr="20">
         <covered by="Tests\Unit\ParseTest::parse_properties_should_return_the_final_value"/>
@@ -76,7 +84,7 @@
         <token name="T_DOC_COMMENT">     * @param mixed $object</token>
       </line>
       <line no="9">
-        <token name="T_DOC_COMMENT">     * @param string $str</token>
+        <token name="T_DOC_COMMENT">     * @param ?string $str</token>
       </line>
       <line no="10">
         <token name="T_DOC_COMMENT">     * @return mixed</token>
@@ -94,18 +102,14 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">parse</token>
         <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_STRING">mixed</token>
-        <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$object</token>
         <token name="T_COMMA">,</token>
         <token name="T_WHITESPACE"> </token>
+        <token name="T_QUESTION_MARK">?</token>
         <token name="T_STRING">string</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$str</token>
         <token name="T_CLOSE_BRACKET">)</token>
-        <token name="T_COLON">:</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_STRING">mixed</token>
       </line>
       <line no="13">
         <token name="T_WHITESPACE">    </token>
@@ -144,6 +148,11 @@
         <token name="T_OPEN_BRACKET">(</token>
         <token name="T_EXCLAMATION_MARK">!</token>
         <token name="T_VARIABLE">$obj</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_BOOLEAN_OR">||</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EXCLAMATION_MARK">!</token>
+        <token name="T_VARIABLE">$method</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
@@ -268,6 +277,10 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$object</token>
         <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_COALESCE">??</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$object</token>
         <token name="T_SEMICOLON">;</token>
       </line>
       <line no="29">

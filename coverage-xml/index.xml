@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
-  <build time="Sat Apr 23 15:39:13 UTC 2022" phpunit="9.5.20" coverage="9.2.15">
+  <build time="Sat Apr 23 16:28:54 UTC 2022" phpunit="9.5.20" coverage="9.2.15">
     <runtime name="PHP" version="8.1.1" url="https://secure.php.net/"/>
     <driver name="xdebug" version="3.1.4"/>
   </build>
@@ -9,13 +9,15 @@
       <test name="Tests\Unit\ParseTest::parse_properties_should_return_the_final_value" size="unknown" result="0" status="PASSED"/>
       <test name="Tests\Unit\ParseTest::parse_methods_should_return_the_final_value" size="unknown" result="0" status="PASSED"/>
       <test name="Tests\Unit\ParseTest::parse_methods_with_parameters_should_return_the_final_value" size="unknown" result="0" status="PASSED"/>
+      <test name="Tests\Unit\ParseTest::should_return_null_if_null_is_passed_as_object" size="unknown" result="0" status="PASSED"/>
+      <test name="Tests\Unit\ParseTest::should_return_the_original_object_if_str_is_null" size="unknown" result="0" status="PASSED"/>
     </tests>
     <directory name="/">
       <totals>
-        <lines total="56" comments="14" code="42" executable="11" executed="10" percent="90.91"/>
-        <methods count="3" tested="2" percent="66.67"/>
+        <lines total="56" comments="14" code="42" executable="11" executed="11" percent="100.00"/>
+        <methods count="3" tested="3" percent="100.00"/>
         <functions count="0" tested="0" percent="0"/>
-        <classes count="2" tested="1" percent="50.00"/>
+        <classes count="2" tested="2" percent="100.00"/>
         <traits count="0" tested="0" percent="0"/>
       </totals>
       <file name="Foo.php" href="Foo.php.xml">
@@ -29,10 +31,10 @@
       </file>
       <file name="String2chaining.php" href="String2chaining.php.xml">
         <totals>
-          <lines total="31" comments="7" code="24" executable="9" executed="8" percent="88.89"/>
-          <methods count="1" tested="0" percent="0.00"/>
+          <lines total="31" comments="7" code="24" executable="9" executed="9" percent="100.00"/>
+          <methods count="1" tested="1" percent="100.00"/>
           <functions count="0" tested="0" percent="0"/>
-          <classes count="1" tested="0" percent="0.00"/>
+          <classes count="1" tested="1" percent="100.00"/>
           <traits count="0" tested="0" percent="0"/>
         </totals>
       </file>

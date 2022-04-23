@@ -12,7 +12,7 @@ class String2chaining
     public static function parse($object, ?string $str)
     {
         return array_reduce(explode('->', $str), function ($obj, $method) {
-            if (!$obj) {
+            if (!$obj || !$method) {
                 return null;
             }
 

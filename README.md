@@ -9,3 +9,60 @@ Convert string containing chains into object chains
 ![Codacy grade](https://img.shields.io/codacy/grade/178068ebd8d146219a848e3b244ac60d?style=for-the-badge)
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/AzenoX/php-string2chaining?style=for-the-badge)
 
+## Installation
+
+Via composer
+
+```bash
+composer require azenox/php-string2chaining
+```
+
+## Usage
+
+There is only one method: **parse()**
+
+For example when testing with Laravel, we can have something like this:
+
+```php
+public function setUp(): void
+{
+    parent::setUp();
+
+    $this->user1 = User::find(1);
+    $this->user2 = User::find(2);
+}
+
+/**
+ * @return string[][]
+ */
+private function userPayload()
+{
+    return [
+        'test with user1' => [
+            'user1',
+            'birth_date->format(\'Y-m-d\')',
+            '1998-08-22'
+        ],
+        'test with user2' => [
+            'user2',
+            'another_date->format(\'Y-m-d\')',
+            '1998-03-30'
+        ],
+    ];
+}
+
+/**
+ * @test
+ * @dataProvider userPayload
+ */
+public function birth_date_should_be_equals_to_this_date($user, $str, $test)
+{
+    $obj = $this->{$user};
+
+    $this->assertEquals($test, String2chaining::parse($obj, $str));
+}
+```
+
+## Version
+
+![Packagist Version](https://img.shields.io/packagist/v/AzenoX/php-string2chaining?label=Version&style=for-the-badge)

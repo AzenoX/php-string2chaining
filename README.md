@@ -21,7 +21,7 @@ composer require azenox/php-string2chaining
 
 There is only one method: **parse()**
 
-For example when testing with Laravel, we can have something like this:
+For example when testing with PHPUnit, we can have something like this:
 
 ```php
 public function setUp(): void
@@ -32,9 +32,6 @@ public function setUp(): void
     $this->user2 = User::find(2);
 }
 
-/**
- * @return string[][]
- */
 private function userPayload()
 {
     return [
